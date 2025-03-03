@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="asset/css/style.css">
+    <title> Reader Comic </title>
+</head>
+
+<body>
+    <div id="top" class="fixed-top w-100 p-2 mt-2">
+        <div class="btn btn-dark-custom text-light border border-secondary mx-1" id="btn_reset"> <i
+                class='bx bx-reset'></i> Reset </div>
+    </div>
+    <div id="main" class="d-flex align-items-center">
+        <div class="slide-container">
+            <img class="w-100 slide" src="asset/images/01.jpg" data-zoom="1">
+            <img class="w-100 slide" src="asset/images/02.jpg" data-zoom="1">
+            <img class="w-100 slide" src="asset/images/03.jpg" data-zoom="1">
+            <img class="w-100 slide" src="asset/images/04.jpg" data-zoom="1">
+            <img class="w-100 slide" src="asset/images/05.jpg" data-zoom="1">
+            <img class="w-100 slide" src="asset/images/06.jpg" data-zoom="1">
+        </div>
+    </div>
+    <div
+        class="btn position-absolute border-0 text-light prev rounded-0 text-center d-flex align-items-center btn-prev">
+        <i class='bx bxs-chevron-left'></i>
+    </div>
+    <div
+        class="btn position-absolute border-0 text-light next rounded-0 text-center d-flex align-items-center btn-next">
+        <i class='bx bxs-chevron-right'></i>
+    </div>
+    <div id="page_list" class="h-100 p-2">
+        <div id="close_grid_page_comic" class="btn btn-sm text-light h-auto rounded-circle mb-2 mt-1"
+            style="font-size: 1.6rem;">
+            <i class='bx bxs-x-circle'></i>
+        </div>
+        <div class="row w-100 overflow-auto h-100 pb-5 align-content-start custom-scrollbar">
+        </div>
+    </div>
+    <div id="bottom" class="fixed-bottom d-flex w-100 p-2 mb-4 justify-content-between">
+        <div id="left_bottom" class="d-flex">
+            <div id="grid_page_comic" class="btn btn-dark-custom text-light border border-secondary mx-1"> <i
+                    class='bx bxs-grid'></i>
+            </div>
+            <div class="btn btn-dark-custom text-light border border-secondary mx-1 d-flex align-items-center"
+                style="cursor: auto;" id="pageButton">
+                <span class="mr-1"> Page </span>
+                <span class="mr-1">
+                    <span id="current_page_comic"></span> / <span id="total_page_comic"></span>
+                </span>
+            </div>
+
+            <div class="d-flex btn-group border border-secondary rounded mx-1">
+                <div class="btn btn-dark-custom text-light btn-prev"> <i class='bx bxs-chevron-left'></i> </div>
+                <div class="btn btn-dark-custom text-light btn-next"> <i class='bx bxs-chevron-right'></i> </div>
+            </div>
+        </div>
+        <div id="right_bottom" class="d-flex">
+            <div class="d-flex btn-group border border-secondary rounded mx-1">
+                <div class="btn btn-dark-custom text-light zoom-in"> <i class='bx bx-zoom-in'></i> </div>
+                <div class="btn btn-dark-custom text-light zoom-out"> <i class='bx bx-zoom-out'></i> </div>
+            </div>
+            <div class="btn btn-dark-custom text-light border border-secondary mx-1" id="fullscreen-btn">
+                <i class='bx bx-fullscreen'></i>
+            </div>
+        </div>
+    </div>
+    <div id="setting_bottom_control">
+        <div class="text-center text-light mx-auto border-bottom-0" id="btn_show_box_bottom_setting">
+            <i class='bx bx-chevron-up'></i>
+        </div>
+        <div id="setting_bottom" class="p-3 border-top-0 text-light d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <div> Spider Man </div>
+                <div class="btn border border-secondary text-light ml-3" id="btn_download">
+                    <i class='bx bx-download'></i>
+                </div>
+            </div>
+            <div class="d-flex">
+                <div class="btn border border-secondary text-light mx-1" id="btn_brightness">
+                    <i class='bx bxs-brightness-half'></i>
+                </div>
+                <div id="brightness_control" class="brightness-slider">
+                    <input type="range" id="brightness_range" min="20" max="100" value="100">
+                </div>
+                <div class="btn border border-secondary text-light mx-1" id="btn_dark_mode">
+                    <i class='bx bx-sun'></i>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="asset/js/jquery-3.5.0.min.js"></script>
+    <script src="asset/js/bootstrap.bundle.min.js"></script>
+    <script src="asset/js/script.js"></script>
+</body>
+
+</html>
